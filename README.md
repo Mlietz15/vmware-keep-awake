@@ -57,3 +57,7 @@ with `CREATE_NO_WINDOW`, so no console window ever appears.
 
 The task is registered with `AllowStartIfOnBatteries` / `DontStopIfGoingOnBatteries`; the
 Task Scheduler defaults would kill it on battery, which is the case that matters on a laptop.
+
+## License
+
+MIT - see [LICENSE](LICENSE).
