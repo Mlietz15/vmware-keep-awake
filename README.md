@@ -58,14 +58,6 @@ machine awake, and neither do the permanently running services (`vmware-authd`,
 `vmware-tray`, `vmware-usbarbitrator64`) — those run from boot to shutdown and would
 otherwise keep the laptop awake forever.
 
-## No console window
-
-`powershell.exe -WindowStyle Hidden` is **not** reliable: PowerShell hides the window only
-*after* the host has created it, and on Windows 11 machines where **Windows Terminal** is
-the default terminal application the hint is ignored altogether — a console window stays
-on screen. This is why the same task can be silent on one laptop and show a window on
-another.
-
 The installer therefore compiles `KeepAwakeLauncher.exe`, a tiny GUI-subsystem stub (PE
 subsystem 2, so it can never own a console) that starts PowerShell with
 `CREATE_NO_WINDOW`. A headless conhost is used and the hand-off to Windows Terminal never
