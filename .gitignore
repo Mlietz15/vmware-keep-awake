@@ -1,0 +1,8 @@
+# Transfer archive, rebuilt on demand
+*.zip
+
+# Superseded by Install-KeepAwake.ps1 - kept locally, not part of the project
+Install-KeepAwakeTask.ps1
+
+# Compiled at install time into %LOCALAPPDATA%\Programs\VMware-KeepAwake
+KeepAwakeLauncher.exe
